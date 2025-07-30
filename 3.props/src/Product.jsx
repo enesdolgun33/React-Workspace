@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Product(props) {
+function Product(props) { // Product({productname, price}) -> şeklinde yaparsak 5. satıra gerek kalmaz
     
     const {productName,price} = props;
   

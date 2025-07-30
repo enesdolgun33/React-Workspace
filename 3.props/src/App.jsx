@@ -14,8 +14,9 @@ function App() {
       <Product productName={productName} price={15000}/> */}
       <Container> {/*Container companentinin içinde product componentini çağırdık */}
         <Product productName="Terlik" price={800}/>
-      </Container>
-      
+        <Product productName="Tablet" price={9000}/>
+        <Product productName="Telefon" price={32000}/>
+      </Container>  
     </div>
  )
 }
