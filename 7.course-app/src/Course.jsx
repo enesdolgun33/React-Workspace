@@ -6,13 +6,13 @@ function Course({course}) {
 
     return (
         <div className='course'>
-            <div>
-                <img src={image} width={250} height={150} />
-                <h4>{title}</h4>
-                <h5>{description}</h5>
-                <h3>{price}</h3>
-                <a href={link}>Satın almak için</a>
-            </div>
+                <img src={image} width={210} height={120} />
+                <h4 className='course-title'>{title}</h4>
+                <p className='course-desc'>{description}</p>
+                <h3 className='course-price'>{price} ₺</h3>
+                <div className='course-link'>
+                    <a href={link}>Satın almak için</a>
+                </div>
         </div>
     )
 }
