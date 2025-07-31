@@ -31,10 +31,35 @@ function App() {
     const response = await axios.put(`${BASE_URL}/users/${userId}`,updatedUser);
   }
 
-// 
+// delete ile user silme
   const deleteUserById = async (userId)=>{
     const deletedResponse = await axios.delete(`${BASE_URL}/users/${userId}`);
     console.log(deletedResponse.data);
+  }
+
+
+
+
+
+
+// Burası async - await çalışma prensibini daha güzel anlamak için :
+// kodu çalıştırmak için promise beklenir bu şekilde de uygulmamız hata vermez 
+// (senkronize çalışırlar)
+
+  const getUserBYId = async (userId)=>{
+    const response = await axios.get(`${BASE_URL}/users/${userId}`);
+    return response.data.postId;
+  }
+
+  const getPostById = async (postId)=>{
+    const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+    return response.data;
+  }
+
+  const getPost = async ()=>{
+    const postId = await getUserBYId(1);
+    const postData = await getPostById(postId);
+    console.log(postData);
   }
 
 
@@ -56,7 +81,9 @@ function App() {
     //   "password" : "ardackr1907"
     // })
 
-    deleteUserById("0e16")
+    // deleteUserById("0e16")
+
+    getPost();
   },[])
   
   return (
