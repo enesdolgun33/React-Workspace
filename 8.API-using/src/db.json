@@ -1,15 +1,19 @@
 {
-    "users" : [
-        {
-            "id" : 1,
-            "username" : "enes10",
-            "password" : "ed10"
-        },
-
-        {
-            "id" : 2,
-            "username" : "ishak33",
-            "password" : "id33"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "username": "enes10",
+      "password": "ed10"
+    },
+    {
+      "id": "2",
+      "username": "ishak33",
+      "password": "id33"
+    },
+    {
+      "id": "0e16",
+      "username": "arda",
+      "password": "0606"
+    }
+  ]
 }
