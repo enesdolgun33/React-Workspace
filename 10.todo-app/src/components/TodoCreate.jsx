@@ -5,6 +5,11 @@ function TodoCreate({onCreateTodo}) {
 
   const [newTodo, setNewTodo] = useState('');
 
+  const clearInput = ()=>{
+    setNewTodo('');
+    // her yeni todo girildiğinde inputu temizler
+  }
+
   const createTodo = () => {
     if(!newTodo) return;
     // ekranda değer girilmemişse ekleme yapmaz
@@ -14,6 +19,7 @@ function TodoCreate({onCreateTodo}) {
       content : newTodo // contente de ekrandan girilmiş olan değeri koyar
     }
     onCreateTodo(request) // ve bu fonksıyonu calıştırır bu da App.jsxdeki createTodo fonksiyonudur
+    clearInput();
   }
 
   return (

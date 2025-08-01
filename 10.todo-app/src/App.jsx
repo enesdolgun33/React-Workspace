@@ -26,7 +26,8 @@ function App() {
 
         burada child'den parents'e props geçmiş olduk tersten giderek
       */}
-      <TodoList/>
+
+      <TodoList todos = {todos}/>
     </div>
    </div>
   )
