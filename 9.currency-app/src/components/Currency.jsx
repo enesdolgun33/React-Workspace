@@ -21,7 +21,6 @@ function Currency() {
         setResult(result)
     }
 
-
   return (
     <div className='currency-div'>
         <div className='title'>

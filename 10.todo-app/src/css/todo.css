@@ -1,0 +1,22 @@
+.todo-list-div {
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.todo-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding: 10px;
+
+}
+
+.todo-icons {
+    font-size: 25px;
+    margin-right: 7px;
+    cursor: pointer;
+
+}
