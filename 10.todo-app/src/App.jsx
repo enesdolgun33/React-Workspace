@@ -13,6 +13,10 @@ function App() {
 
   }
 
+  const removeTodo =(todoId)=>{
+    setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+  }
+
   console.log(todos);
 
   return (
@@ -27,7 +31,7 @@ function App() {
         burada child'den parents'e props geçmiş olduk tersten giderek
       */}
 
-      <TodoList todos = {todos}/>
+      <TodoList todos = {todos} onRemoveTodo = {removeTodo}/>
     </div>
    </div>
   )
