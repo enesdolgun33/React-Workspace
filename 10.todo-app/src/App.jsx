@@ -11,10 +11,21 @@ function App() {
     setTodos([...todos, newTodo]);
     // ... -> Spread Operator : bir dizi, nesne ya da ifadenin elemanlarını ayrı ayrı yaymak için kullanılır
 
-  }
+  }      
 
   const removeTodo =(todoId)=>{
     setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+  }
+
+  const updateTodo = (newTodo)=>{
+    const updatedTodos = todos.map((todo)=>{
+      if( todo.id!==newTodo.id){
+        return todo;
+      }
+      return newTodo;
+    })
+
+    setTodos([...updatedTodos]);
   }
 
   console.log(todos);
@@ -31,7 +42,7 @@ function App() {
         burada child'den parents'e props geçmiş olduk tersten giderek
       */}
 
-      <TodoList todos = {todos} onRemoveTodo = {removeTodo}/>
+      <TodoList todos = {todos} onRemoveTodo = {removeTodo} onUpdateTodo = {updateTodo}/>
     </div>
    </div>
   )

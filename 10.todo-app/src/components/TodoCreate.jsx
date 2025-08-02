@@ -25,12 +25,13 @@ function TodoCreate({onCreateTodo}) {
   return (
     <div className='todo-create'>
         <input 
+        spellCheck='false'
         value={newTodo}
         onChange={(e)=> setNewTodo(e.target.value)}
         //ekrandan girilen herhangi bir input değeri setNewTodo ile newTodoya koyduk -> line:6
 
-        className='todo-input' type="text" placeholder='Todo giriniz' />
-        <button onClick={createTodo} className='todo-create-button'>Todo Oluştur</button>
+        className='todo-input' type="text" placeholder='To Do giriniz' />
+        <button onClick={createTodo} className='todo-create-button'>To Do Oluştur</button>
     </div>
   )
 }
