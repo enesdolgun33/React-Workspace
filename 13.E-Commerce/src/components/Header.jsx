@@ -4,13 +4,20 @@ import { BsBasket } from "react-icons/bs";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDrawer } from '../redux/slices/basketSlice';
+
 
 
 function Header() {
 
     const [theme, setTheme] = useState(true);
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
+
+    const { products } = useSelector((store) => store.basket);
 
     const changeTheme = () => {
         const root = document.getElementById("root");
@@ -38,7 +45,9 @@ function Header() {
                     {
                         theme ? <FaMoon className='icon' onClick={changeTheme} /> : <CiLight className='icon' onClick={changeTheme} />
                     }
-                    <BsBasket className='icon' />
+                    <Badge className='badge' onClick={() => dispatch(setDrawer())} badgeContent={products.length} color="error">
+                        <BsBasket style={{ marginRight: '7px' }} className='icon' />
+                    </Badge>
                 </div>
 
             </div>

@@ -6,6 +6,7 @@ import { setSelectedProduct } from '../redux/slices/productSlice';
 import '../css/ProductDetails.css'
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
+import { addToBasket, calculateBasket } from '../redux/slices/basketSlice';
 
 
 
@@ -26,6 +27,20 @@ function ProductDetails() {
         if (count > 0) {
             setCount(count - 1);
         }
+    }
+
+    const addBasket = () => {
+        const payload = {
+            id,
+            price,
+            image,
+            title,
+            description,
+            count,
+        }
+
+        dispatch(addToBasket(payload));
+        dispatch(calculateBasket());
     }
 
     useEffect(() => {
@@ -55,7 +70,7 @@ function ProductDetails() {
                 </div>
 
                 <div>
-                    <button className='add-to-cart-btn'>Sepete Ekle</button>
+                    <button className='add-to-cart-btn' onClick={addBasket} >Sepete Ekle</button>
                 </div>
             </div>
         </div>

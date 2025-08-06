@@ -20,3 +20,43 @@ body {
 #root {
     height: 100vh;
 }
+
+.drawer {
+    width: 500px !important;
+
+}
+
+.drawer-img {
+    margin-right: 5px;
+}
+
+.drawer-title {
+    width: 320px;
+    margin-right: 5px;
+}
+
+.drawer-price {
+    font-weight: bold;
+    margin-right: 10px;
+    width: 60px;
+}
+
+.drawer-button {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(208, 6, 6);
+    border: none;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.drawer-button:hover {
+    cursor: pointer;
+}
+
+.total-amount {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}

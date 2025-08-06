@@ -26,3 +26,7 @@
 .icon:hover {
     cursor: pointer;
 }
+
+.badge{
+    font-size: 30px;
+}
