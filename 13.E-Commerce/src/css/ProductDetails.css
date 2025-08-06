@@ -1,0 +1,61 @@
+.main-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image-div {
+    margin-right: 40px;
+}
+
+.image {
+    width: 300px;
+    height: 500px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.price {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: bold;
+    color: red;
+}
+
+.count {
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.icons {
+    font-size: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.span {
+    font-size: 35px;
+}
+
+.add-to-cart-btn {
+    margin-top: 25px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(31, 179, 8);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.add-to-cart-btn:hover {
+    cursor: pointer;
+}

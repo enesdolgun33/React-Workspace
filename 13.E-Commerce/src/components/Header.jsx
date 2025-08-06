@@ -3,44 +3,47 @@ import '../css/Header.css'
 import { BsBasket } from "react-icons/bs";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 
 function Header() {
 
-    const [theme, setTheme] = useState(false);
+    const [theme, setTheme] = useState(true);
 
-    const changeTheme = ()=>{
+    const navigate = useNavigate();
+
+    const changeTheme = () => {
         const root = document.getElementById("root");
         setTheme(!theme);
-        if(theme){
-            root.style.backgroundColor="black";
-            root.style.color="#fff";
+        if (theme) {
+            root.style.backgroundColor = "black";
+            root.style.color = "#fff";
         }
-        else{
-            root.style.backgroundColor="#fff";
-            root.style.color="black";
+        else {
+            root.style.backgroundColor = "#fff";
+            root.style.color = "black";
         }
     }
 
     return (
-    <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-between'}} >
-        <div className='flex-row'>
-            <img className='logo' src="./src/images/logo.png" />
-            <p className='logo-text'>ENES A.Ş.</p>
-        </div>
-
-        <div className='flex-row'>
-            <input className='search-input' type="text" placeholder='Bir şeyler ara'/>
-            <div>
-                {
-                    theme ? <FaMoon className='icon' onClick={changeTheme}/> : <CiLight className='icon' onClick={changeTheme}/>
-                }
-                <BsBasket  className='icon'/>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} >
+            <div className='flex-row' style={{ cursor: 'pointer' }} onClick={() => navigate("/")}>
+                <img className='logo' src="./src/images/logo.png" />
+                <p className='logo-text'>ENES A.Ş.</p>
             </div>
 
+            <div className='flex-row'>
+                <input className='search-input' type="text" placeholder='Bir şeyler ara' />
+                <div>
+                    {
+                        theme ? <FaMoon className='icon' onClick={changeTheme} /> : <CiLight className='icon' onClick={changeTheme} />
+                    }
+                    <BsBasket className='icon' />
+                </div>
+
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Header

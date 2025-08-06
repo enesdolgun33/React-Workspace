@@ -12,6 +12,7 @@
 .search-input {
     border: none;
     border-bottom: 1px solid lightgray;
+    border-radius: 5px;
     padding: 5px 10px;
     outline: none;
     margin-right: 15px;
