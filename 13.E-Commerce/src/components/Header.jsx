@@ -20,7 +20,7 @@ function Header() {
     const { products } = useSelector((store) => store.basket);
 
     const changeTheme = () => {
-        const root = document.getElementById("root");
+        const root = document.getElementById("body");
         setTheme(!theme);
         if (theme) {
             root.style.backgroundColor = "black";
