@@ -103,9 +103,37 @@ console.log(sonuc)
 
 // ------------------------------------------------------------------
 
-function write(array : Array<string>){
+// mesela bu fonksiyon bir şey geri döndürmeyeceği için şu şekilde olabilir
+function write(array : Array<string>) :void {
   array.forEach((value : string )=>console.log(value))
 }
 
 let array2 : Array<string> = ["enes" , "ali" , "arda"];
 write(array2)
+
+// --------------------------------------------------------------------
+interface Userr{
+  name: string,
+  age: number
+}
+
+function writeConsole(array:Array<Userr>):void{
+  array.forEach((value:Userr)=> console.log(value))
+}
+
+const obj2 : Userr ={
+  name : "Harun",
+  age : 35
+}
+
+const obj1 : Userr ={
+  name : "Enes",
+  age : 22
+}
+
+let myArray : Array<Userr> = [obj1 , obj2 , {name:"Ahmet", age:25}];
+
+writeConsole(myArray)
+
+//! ----------------------------------4-----------------------------------------------------
+
