@@ -6,16 +6,22 @@ import RouterConfig from './config/RouterConfig'
 import Loading from './components/Loading'
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
-import { calculateBasket, setDrawer } from './redux/slices/basketSlice'
+import { calculateBasket, decreaseCount, deleteBasket, setDrawer } from './redux/slices/basketSlice'
 
 function App() {
 
   const { products, drawer, totalAmount } = useSelector((store) => store.basket);
   const dispatch = useDispatch();
 
+  const handleRemoveProduct = (id) => {
+    dispatch(decreaseCount(id));
+    dispatch(calculateBasket());
+
+  }
+
   useEffect(() => {
     dispatch(calculateBasket());
-  }, [])
+  }, [dispatch])
 
   return (
     <div>
@@ -32,7 +38,9 @@ function App() {
                     <img className='drawer-img' src={product.image} width={50} height={50} />
                     <p className='drawer-title'>{product.title}({product.count})</p>
                     <p className='drawer-price'>{product.price} TL</p>
-                    <button className='drawer-button'>Sil</button>
+                    <button
+                      onClick={() => handleRemoveProduct(product.id)}
+                      className='drawer-button'>Sil</button>
                   </div>
 
                 </div>

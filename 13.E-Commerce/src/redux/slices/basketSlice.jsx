@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { act } from 'react';
 
 const getBasketFromStorage = () => {
     if (localStorage.getItem("basket")) {
@@ -42,6 +43,22 @@ export const basketSlice = createSlice({
             }
         },
 
+        deleteBasket: (state, action) => {
+            state.products = [...state.products.filter((product) => product.id !== action.payload)];
+            writeFromBasketToStorage(state.products);
+        },
+
+        decreaseCount: (state, action) => {
+            const product = state.products.find((e) => e.id === action.payload);
+            if (product) {
+                product.count -= 1;
+                if (product.count <= 0) {
+                    state.products = state.products.filter((e) => e.id !== action.payload);
+                }
+                writeFromBasketToStorage(state.products);
+            }
+        },
+
         setDrawer: (state) => {
             state.drawer = !state.drawer;
         },
@@ -55,6 +72,6 @@ export const basketSlice = createSlice({
     },
 })
 
-export const { addToBasket, setDrawer, calculateBasket } = basketSlice.actions
+export const { addToBasket, deleteBasket, decreaseCount, setDrawer, calculateBasket } = basketSlice.actions
 
 export default basketSlice.reducer
