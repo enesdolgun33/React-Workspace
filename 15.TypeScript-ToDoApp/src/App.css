@@ -1,4 +1,5 @@
 body{
+  background-color: #a94e8572;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -20,9 +21,9 @@ body{
 .todo-create-input{
   width: 100%;
   border: none;
-  background-color:pink;
+  /* background-color:pink; */
   font-size: large;
-  color: white;
+  /* color: white; */
   padding: 17px 3px;
   border-radius: 5px;
   outline-color: plum;
@@ -34,8 +35,14 @@ body{
   padding: 5px 10px;
   border-radius: 5px;
   color: black;
-  background-color: gold;
+  background-color:#20b2aa ;
   font-weight: 700;
   margin-top: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  body{
+    width: 480px;
+  }
 }
