@@ -1,4 +1,5 @@
 import './App.css'
+import MUIAutoComplete from './components/MUIAutoComplete'
 import MUIButton from './components/MUIButton'
 import MUICheckbox from './components/MUICheckbox'
 import MUISelect from './components/MUISelect'
@@ -16,7 +17,8 @@ function App() {
       <hr />
       <h1>Select</h1>
       <MUISelect /> */}
-      <MUICheckbox />
+      {/* <MUICheckbox /> */}
+      <MUIAutoComplete />
     </div>
   )
 }
