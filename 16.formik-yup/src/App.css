@@ -43,3 +43,7 @@ input  {
   border-radius: 3px;
 }
 
+.input-error{
+  font-size: 13px;
+  color: red;
+}
