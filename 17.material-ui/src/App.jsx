@@ -1,5 +1,6 @@
 import './App.css'
 import MUIAccordion from './components/MUIAccordion'
+import MUIAlert from './components/MUIAlert'
 import MUIAppBar from './components/MUIAppBar'
 import MUIAutoComplete from './components/MUIAutoComplete'
 import MUIAvatar from './components/MUIAvatar'
@@ -40,7 +41,10 @@ function App() {
       {/* <MUIDrawer /> */}
       {/* <MUIBadge /> */}
       {/* <MUIAvatar /> */}
-      <MUITooltip />
+      {/* <MUITooltip /> */}
+      <MUIAlert />
+
+
     </div>
   )
 }
