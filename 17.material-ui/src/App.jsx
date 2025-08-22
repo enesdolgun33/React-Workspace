@@ -14,6 +14,7 @@ import MUIImageList from './components/MUIImageList'
 import MUISelect from './components/MUISelect'
 import MUIStack from './components/MUIStack'
 import MUITextField from './components/MUITextField'
+import MUITooltip from './components/MUITooltip'
 
 function App() {
 
@@ -38,8 +39,8 @@ function App() {
       {/* <MUIImageList /> */}
       {/* <MUIDrawer /> */}
       {/* <MUIBadge /> */}
-      <MUIAvatar />
-
+      {/* <MUIAvatar /> */}
+      <MUITooltip />
     </div>
   )
 }
