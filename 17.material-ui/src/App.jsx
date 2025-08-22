@@ -9,6 +9,7 @@ import MUIBox from './components/MUIBox'
 import MUIButton from './components/MUIButton'
 import MUICard from './components/MUICard'
 import MUICheckbox from './components/MUICheckbox'
+import MUIDialog from './components/MUIDialog'
 import MUIDrawer from './components/MUIDrawer'
 import MUIGrid from './components/MUIGrid'
 import MUIImageList from './components/MUIImageList'
@@ -42,8 +43,8 @@ function App() {
       {/* <MUIBadge /> */}
       {/* <MUIAvatar /> */}
       {/* <MUITooltip /> */}
-      <MUIAlert />
-
+      {/* <MUIAlert /> */}
+      <MUIDialog />
 
     </div>
   )
