@@ -15,6 +15,7 @@ import MUIGrid from './components/MUIGrid'
 import MUIImageList from './components/MUIImageList'
 import MUIProgress from './components/MUIProgress'
 import MUISelect from './components/MUISelect'
+import MUISkeleton from './components/MUISkeleton'
 import MUISnackbar from './components/MUISnackbar'
 import MUIStack from './components/MUIStack'
 import MUITextField from './components/MUITextField'
@@ -48,7 +49,8 @@ function App() {
       {/* <MUIAlert /> */}
       {/* <MUIDialog /> */}
       {/* <MUISnackbar /> */}
-      <MUIProgress />
+      {/* <MUIProgress /> */}
+      <MUISkeleton />
 
     </div>
   )
