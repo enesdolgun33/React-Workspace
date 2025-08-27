@@ -14,6 +14,7 @@ import MUIDrawer from './components/MUIDrawer'
 import MUIGrid from './components/MUIGrid'
 import MUIImageList from './components/MUIImageList'
 import MUISelect from './components/MUISelect'
+import MUISnackbar from './components/MUISnackbar'
 import MUIStack from './components/MUIStack'
 import MUITextField from './components/MUITextField'
 import MUITooltip from './components/MUITooltip'
@@ -44,7 +45,8 @@ function App() {
       {/* <MUIAvatar /> */}
       {/* <MUITooltip /> */}
       {/* <MUIAlert /> */}
-      <MUIDialog />
+      {/* <MUIDialog /> */}
+      <MUISnackbar />
 
     </div>
   )
