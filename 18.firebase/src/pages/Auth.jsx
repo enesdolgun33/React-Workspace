@@ -1,16 +1,34 @@
 import React, { useState } from 'react';
 import '../css/Auth.css';
 import { FaGoogle } from "react-icons/fa";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { auth } from '../Firebase';
 import { useNavigate } from 'react-router-dom';
+
+const provider = new GoogleAuthProvider();
 
 function Auth() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
+    const loginWithGoogle = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider)
+
+            // const credential = GoogleAuthProvider.credentialFromResult(response);
+            // const token = credential.accessToken;
+            const user = response.user;
+            if (user) {
+                navigate("/")
+            }
+
+        } catch (error) {
+            toast.error(error.message);
+        }
+    }
 
     const login = async () => {
         try {
@@ -48,7 +66,7 @@ function Auth() {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} className='inputs' type="password" placeholder='Şifre' />
             </div>
             <div className='buttons'>
-                <button className='google-button'><FaGoogle style={{ padding: 0, margin: '0px 8px 0px 0px' }} />
+                <button onClick={loginWithGoogle} className='google-button'><FaGoogle style={{ padding: 0, margin: '0px 8px 0px 0px' }} />
                     Google ile Giriş Yap</button>
                 <button onClick={login} className='signup-button'>Giriş Yap</button>
                 <button onClick={register} className='register-button'>Kaydol</button>
