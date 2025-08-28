@@ -27,6 +27,23 @@
     border-radius: 5px;
     margin: 10px 0;
 }
+
+.buttons{
+    display: flex;
+}
+
+
+.google-button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(203, 36, 30);
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+}
+
 .signup-button{
     padding: 5px 15px;
     border: none;
@@ -43,7 +60,6 @@
     border-radius: 5px;
     background-color: green;
     color: #fff;
-    margin-right: 10px;
     cursor: pointer;
 }
 
