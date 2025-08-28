@@ -1,0 +1,24 @@
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(135, 117, 254);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar-left{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.navbar-right{
+    font-family: arial;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+}

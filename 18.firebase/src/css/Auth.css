@@ -1,0 +1,49 @@
+.auth{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-header{
+    font-family: arial;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs{
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: 350px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.signup-button{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(56, 95, 236);
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.register-button{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
